@@ -23,7 +23,7 @@ To run a game you need an active internet connection, then
 ## Basic Game Functionality & General Usage Notes:
 
 - Use arrow keeys or to control player.
-- Avoid the Enemies and the water as colliding with these the Player will be reset to initial position
+- Avoid the Enemies and the water as colliding with these will result in time loss due to be moved back to initial position
 
 ## Game Rules:
 
