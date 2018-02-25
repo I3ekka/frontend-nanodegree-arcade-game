@@ -31,3 +31,7 @@ Since the project's covers the basic functionality, there are some open issues r
 - how many lives do you have
 
 
+## Contributing
+
+No contribution needed for this project, since it is a Project for the Udacity Frontend Nanodegree.
+
