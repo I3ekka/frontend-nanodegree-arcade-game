@@ -20,10 +20,14 @@ Enemy.prototype.update = function(dt) {
     // You should multiply any movement by the dt parameter
     // which will ensure the game runs at the same speed for
     // all computers.
-    this.x = this.x + (this.speed * dt);
+    this.x = Math.round(this.x + (this.speed * dt));
     if (this.x > 505) {
         this.x = -100;
         this.speed = this.speedRandomnizer.random(this.minSpeed, this.maxSpeed);
+    }
+
+    if (this.isCollidingWithPlayer()) {
+        player.reset();
     }
 };
 
@@ -32,20 +36,29 @@ Enemy.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
+
+// Collision between Enemy and Player
+Enemy.prototype.isCollidingWithPlayer = function() {
+    return player.getCurrentTile() === this.getCurrentTile();
+};
+
+// Calculating Current Tile Position of Enemy
+Enemy.prototype.getCurrentTile = function () {
+    return parseInt('' + Math.round((100 + this.x) / 100) + '' + Math.round((100 + this.y) / 83) + '');
+};
+
+
 // Now write your own player class
 // This class requires an update(), render() and
 // a handleInput() method.
 var Player = function() {
     this.sprite = 'images/char-boy.png';
     this.reset();
-    this.timeout = null;
 };
 
 Player.prototype.update = function(dt) {
-    console.log(this.x, this.y);
-    if (this.y < 68 && this.timeout === null) {
-        this.reset.bind(this);
-        this.timeout = setTimeout(this.reset, 500);
+    if (this.y < 68) {
+        this.reset();
     }
 };
 
@@ -53,7 +66,7 @@ Player.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
-// Player and game Reset
+// Moving Player to initial Position when reaching water and/or colliding with an Enemy
 Player.prototype.reset = function() {
     this.x = 100;
     this.y = 400;
@@ -82,6 +95,12 @@ Player.prototype.moveToPosition = function(x, y) {
     this.y = y;
 };
 
+// Calculating Current Tile Position of Player
+Player.prototype.getCurrentTile = function () {
+    return parseInt('' + Math.round((100 + this.x) / 100) + '' + Math.round((100 + this.y) / 83) + '');
+};
+
+// Defining Speed
 var Speed = function() {
 };
 
@@ -91,7 +110,6 @@ Speed.prototype.random = function(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
         //The maximum is inclusive and the minimum is inclusive
 };
-
 
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
