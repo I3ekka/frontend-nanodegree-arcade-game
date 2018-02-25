@@ -22,12 +22,12 @@ To run a game you need an active internet connection, then
 
 ## General Usage Notes:
 
-- Use arrow keeys or to control player.
+- Use arrow keys to control player.
 - Avoid the Enemies and the water as colliding with these will result in time loss due to be moved back to initial position
 
 ## Game Rules:
 
-The object of the game is to collect all the items in a given time. When colliding with an Enemy or the ocean the Player is set to the inital starting point and looses one (of three) life. After three failed attempts to rech the goal, the game is over. 
+The object of the game is to collect all the items in a given time and bring them to a gathering point (one item at a time). When colliding with an Enemy or the ocean the Player is set to the inital starting point and looses one (of three) life. After three failed attempts to rech the goal, the game is over. 
 
 But since the project yet covers only the basic functionality, there are some open issues reagrding the overall game logic:
 
