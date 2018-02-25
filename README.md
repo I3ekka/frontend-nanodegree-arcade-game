@@ -6,13 +6,16 @@ This repository comprised recreating the classic arcade game *Frogger* and is pa
 
 The original *Frogger-Game* is about directing frogs to their homes one by one by crossing a busy road and navigating a river full of hazards. 
 
-## Project Instructions:
-
 As we were be provided with visual assets and a game loop engine we had to add a number of entities to the game including the player characters and enemies to recreate the cnamed classic arcade game.
+
+## Object of the Game:
+
+The goal is to collect all items in a given time. 
 
 ## Running the Game:
 
 To run a game you need an active internet connection, then
+
 - download the project from Gitub,
 - open the index.html file, 
 - and follow the General usage Notes listed below
@@ -24,12 +27,15 @@ To run a game you need an active internet connection, then
 
 ## Game Rules:
 
-Since the project yet covers only the basic functionality, there are some open issues reagrding the overall game logic:
+The object of the game is to collect all the items in a given time. When colliding with an Enemy or the ocean the Player is set to the inital starting point and looses one (of three) life. After three failed attempts to rech the goal, the game is over. 
 
-- what is the goal of the game
-- when do you win the game 
-- when do you losse
-- how many lives do you have
+But since the project yet covers only the basic functionality, there are some open issues reagrding the overall game logic:
+
+- adding a [timer](https://github.com/I3ekka/frontend-nanodegree-arcade-game/issues/1)
+- adding live [display](https://github.com/I3ekka/frontend-nanodegree-arcade-game/issues/2) and [decreasing functionality](https://github.com/I3ekka/frontend-nanodegree-arcade-game/issues/5)
+- adding collectable [items](https://github.com/I3ekka/frontend-nanodegree-arcade-game/issues/3)
+- adding [gathering place](https://github.com/I3ekka/frontend-nanodegree-arcade-game/issues/4) for named items
+- adding overall styling
 
 ## Contributing:
 
