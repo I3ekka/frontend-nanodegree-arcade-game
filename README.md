@@ -20,7 +20,7 @@ To run a game you need an active internet connection, then
 - open the index.html file, 
 - and follow the General usage Notes listed below
 
-## Basic Game Functionality & General Usage Notes:
+## General Usage Notes:
 
 - Use arrow keeys or to control player.
 - Avoid the Enemies and the water as colliding with these will result in time loss due to be moved back to initial position
