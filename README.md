@@ -31,12 +31,12 @@ Since the project's covers the basic functionality, there are some open issues r
 - how many lives do you have
 
 
-## Contributing
+## Contributing:
 
 No contribution needed for this project, since it is a Project for the Udacity Frontend Nanodegree (see *License*).
 
 
-## License
+## License:
 
 This project was submitted by Rebecca Hahn as part of the Nanodegree at Udacity (Front End Development).
 
